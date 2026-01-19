@@ -40,3 +40,98 @@
 .read-the-docs {
   color: #888;
 }
+/* 入力文字が見えない問題もまとめて解決 */
+input, select, textarea, button {
+  color: #111 !important;
+}
+input, select, textarea {
+  background: #fff !important;
+}
+
+/* --- Bottom Sheet --- */
+.sheetRoot{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+.sheetBackdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
+}
+
+/* ここが絶対に上に来る */
+.sheetPanel{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+
+  background: #fff;
+  border-radius: 22px 22px 0 0;
+  padding: 14px 14px calc(14px + env(safe-area-inset-bottom));
+  box-shadow: 0 -12px 30px rgba(0,0,0,0.18);
+}
+
+.sheetHandle{
+  width: 44px;
+  height: 5px;
+  border-radius: 999px;
+  background: #ddd;
+  margin: 6px auto 10px;
+}
+
+.sheetHeader{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.sheetTitle{
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.sheetClose{
+  border: none;
+  background: #f2f2f2;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.sheetBody{
+  max-height: 65vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.hero{
+  display:flex;
+  gap: 12px;
+  align-items:center;
+  padding: 14px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fff1fb, #e9fbff);
+  border: 1px solid rgba(0,0,0,0.06);
+  margin: 10px 10px 12px;
+}
+
+.heroIcon{
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 26px;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.heroTitle{ font-size: 18px; font-weight: 900; color:#111; }
+.heroSub{ font-size: 12px; opacity: 0.75; font-weight: 700; color:#111; }
